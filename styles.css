@@ -65,16 +65,20 @@ nav ul li a {
 
 .image {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
 }
+
 
 .image img {
-    width: 98vw;
-    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease; /* Agrega una transición de opacidad para un efecto de desvanecimiento */
 }
-
 .search-box {
     position: absolute;
     top: 50%;
@@ -88,41 +92,43 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-.search-options label {
+.search-options .button {
     display: inline-block;
     margin-right: 10px;
-    cursor: pointer;
-    padding: 5px 10px;
-    background-color: #3a5199;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
     border-radius: 5px;
-    color: #d5d6d2;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.search-options input[type="radio"]:checked + label {
-    background-color: #6abf69;
+.search-options .button:hover {
+    background-color: #ccc;
 }
 
 .search-input {
-    position:initial;
+    position: initial;
     width: 600px;
 }
 
 .input-wrapper {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 .input-wrapper input[type="text"] {
     padding: 10px;
     font-size: 16px;
     width: 500px;
-    color:#d5d6d2
+    color: #d5d6d2;
 }
 
 .input-wrapper button {
     padding: 10px 20px;
     background-color: #3a5199;
-    color:#d5d6d2;
+    color: #d5d6d2;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -133,7 +139,7 @@ nav ul li a {
     margin-top: 10px;
     border-radius: 5px;
     padding: 5px;
-    color:#2f2e33;
+    color: #2f2e33;
     width: 40;
     font-size: 200%;
 }
@@ -142,20 +148,20 @@ nav ul li a {
     font-family: Arial, sans-serif;
 }
 
-.titulito h1{
+.titulito h1 {
     text-align: center;
     font-family: Arial, sans-serif;
 }
 
-.welcome-text p{
-    color:#3a5199;
+.welcome-text p {
+    color: #3a5199;
     text-align: center;
     font-size: 100%;
     font-family: Arial, sans-serif;
 }
 
 footer {
-    background-color: #2f2e33 ;
+    background-color: #2f2e33;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -167,8 +173,6 @@ footer {
 footer p {
     margin-top: 0px;
 }
-
-
 
 .login-container {
     width: 300px;
@@ -207,10 +211,8 @@ footer p {
     border-radius: 5px;
     background-color: #3a5199;
     color: #fff;
-    cursor: poin
+    cursor: pointer;
 }
-
-
 
 .register-container {
     width: 300px;
@@ -236,7 +238,7 @@ footer p {
 
 .register-container input[type="text"],
 .register-container input[type="password"],
-.register-container input[type="email"]{
+.register-container input[type="email"] {
     width: 100%;
     padding: 2%;
     margin-bottom: 8px;
@@ -250,27 +252,30 @@ footer p {
     border-radius: 5px;
     background-color: #3a5199;
     color: #fff;
-    cursor: poin
+    cursor: pointer;
 }
 
 .noticias {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
-  }
-  .card {
+}
+
+.card {
     border: 1px solid #ccc;
     margin: 10px;
     width: calc(33.3333% - 20px);
     box-sizing: border-box;
     padding: 10px;
     margin-bottom: 20px;
-  }
-  .card img {
+}
+
+.card img {
     width: 100%;
     height: 180px;
-  }
-  .button {
+}
+
+.button {
     display: inline-block;
     margin-right: 10px;
     padding: 5px 10px;
@@ -283,29 +288,29 @@ footer p {
 .button:hover {
     background-color: #2f2e33;
 }
+
 .gallery {
     margin-top: 50px;
-  }
+}
 
-  .grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-  }
+}
 
-  .grid-item img {
+.grid-item img {
     width: 80%;
     height: 180px;
-  }
+}
 
-  .grid-item p {
+.grid-item p {
     text-align: center;
-  }
+}
 
-
-  .propiedad {
+.propiedad {
     display: flex;
-    align-items: stretch; 
+    align-items: stretch;
     margin: 20px auto;
     background-color: #c6c5c2;
     border: 1px solid #ccc;
@@ -315,12 +320,12 @@ footer p {
 }
 
 .propiedad img {
-    width: 30%; 
-    object-fit: cover; 
+    width: 30%;
+    object-fit: cover;
 }
 
 .informacion {
-    width: 60%; 
+    width: 60%;
     padding: 20px;
 }
 
@@ -331,41 +336,41 @@ footer p {
     padding: 10px 20px;
     border-radius: 5px;
     margin: 20px;
-    text-decoration: none; 
-    align-self: flex-end; 
+    text-decoration: none;
+    align-self: flex-end;
 }
+
 .linea-horizontal {
-    border-top: 1px solid #ccc; 
-    margin: 50px 0; 
+    border-top: 1px solid #ccc;
+    margin: 50px 0;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
 }
 
 .quienesomos {
     max-width: 800px;
-    margin: 50px auto; 
+    margin: 50px auto;
     padding: 20px;
-    background-color: #fffefb; 
+    background-color: #fffefb;
     border-radius: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
-    text-align: center;  
-    color: #3a5199; 
+    text-align: center;
+    color: #3a5199;
     font-size: 200%;
 }
 
-.misioncontenedor{
+.misioncontenedor {
     display: flex;
-    background-color: #d6d6d2
+    background-color: #d6d6d2;
 }
 
-
-.textomision{
+.textomision {
     margin-right: 50px;
     text-align: left;
     justify-content: right;
@@ -374,18 +379,17 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.textomision h2{
+.textomision h2 {
     text-align: center;
     color: #3a5199;
     font-size: 180%;
 }
 
-.missionimage{
+.missionimage {
     width: 720px;
     height: 450px;
     margin-right: 50px;
 }
-
 
 .visioncontenedor {
     display: flex;
@@ -394,15 +398,15 @@ h1 {
 }
 
 .textovision {
-    text-align: left; 
-    width: 35%; 
+    text-align: left;
+    width: 35%;
     margin-left: auto;
     margin-right: 50px;
     justify-content: right;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.textovision h2{
+.textovision h2 {
     text-align: center;
     color: #3a5199;
     font-size: 180%;
