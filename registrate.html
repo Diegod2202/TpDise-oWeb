@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
+   
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="loadHeader.js" defer></script>
+    <script src="loadFooter.js" defer></script>
 </head>
 <body>
     <header></header>
     <div class="register-container">
         <h2>Regístrate</h2>
-        <form action="login.html" method="get">
+        <form id="registerForm">
             <label for="username">Nombre:</label>
             <input type="text" id="username" name="username" required>
             <label for="lastname">Apellido:</label>
@@ -27,5 +36,27 @@
     </div>
 
     <footer></footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            // Obtener los valores de los campos de entrada
+            var username = document.getElementById('username').value;
+            var lastname = document.getElementById('lastname').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Guardar los valores en localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('lastname', lastname);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            // Notificar al usuario y redirigir a la página de inicio de sesión
+            alert('Registro exitoso. Ahora puedes iniciar sesión.');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
