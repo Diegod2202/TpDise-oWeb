@@ -160,19 +160,6 @@ nav ul li a {
     font-family: Arial, sans-serif;
 }
 
-footer {
-    background-color: #2f2e33;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin-top: 0px;
-}
 
 .login-container {
     width: 300px;
@@ -437,4 +424,107 @@ h1 {
     border-width: 2px;
     border-style: solid;
     cursor: pointer;
+}
+
+
+footer {
+    background-color: #2f2e33;
+    color: #fff;
+    padding: 10px 0;
+    height: 250px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .social-links {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section .social-links li {
+    list-style: none;
+}
+
+.footer-section .social-links li a img {
+    width: 32px; /* Ajusta el tamaño del icono */
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.footer-section .social-links li a img:hover {
+    transform: scale(1.1); /* Efecto hover */
+}
+
+.footer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-section form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-section form button {
+    padding: 10px;
+    border: none;
+    background-color: #3A5199;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-section form button:hover {
+    border-color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.linea-horizontal{
+    border: none;
 }

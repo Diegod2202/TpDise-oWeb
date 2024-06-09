@@ -7,27 +7,41 @@
     <link rel="stylesheet" href="styles.css">
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
 </head>
 <body>
   <header></header>
-  <div class="quienesomos">
-    <h1>¿Quienes somos?</h1>
-    <p>Bienvenido a <b>NIEDAN</b> Inmobiliaria, tu socio confiable en el mundo de los bienes raíces. 
-      Desde nuestros inicios, nos hemos dedicado a ofrecer un servicio integral y personalizado 
-      en el mercado inmobiliario, ayudando a nuestros clientes a encontrar el hogar de sus sueños 
-      o a invertir en propiedades que cumplan con sus objetivos financieros.</p>
-
-      En <b>NIEDAN</b>, nos enorgullece nuestra sólida ética de trabajo, nuestro enfoque centrado en el cliente
-      y nuestra experiencia en el sector. Nuestro equipo está formado por profesionales 
-      comprometidos que se esfuerzan por superar las expectativas en cada transacción. 
-      
-      <p>Ya sea que estés buscando comprar, vender o alquilar una propiedad, o si estás interesado 
-      en asesoramiento experto en inversiones inmobiliarias. 
-      En <b>NIEDAN</b>, no solo vendemos propiedades, creamos hogares y construimos relaciones duraderas. </p>
-      
-      <p>Tu hogar, nuestra pasión.</p>
+  <div class = "quienes-somos-container">
+    <div class="quienesomos">
+      <h1>¿Quienes somos?</h1>
+      <p>Bienvenido a <b>NIEDAN</b> Inmobiliaria, tu socio confiable en el mundo de los bienes raíces. 
+        Desde nuestros inicios, nos hemos dedicado a ofrecer un servicio integral y personalizado 
+        en el mercado inmobiliario, ayudando a nuestros clientes a encontrar el hogar de sus sueños 
+        o a invertir en propiedades que cumplan con sus objetivos financieros.</p>
+  
+        En <b>NIEDAN</b>, nos enorgullece nuestra sólida ética de trabajo, nuestro enfoque centrado en el cliente
+        y nuestra experiencia en el sector. Nuestro equipo está formado por profesionales 
+        comprometidos que se esfuerzan por superar las expectativas en cada transacción. 
+        
+        <p>Ya sea que estés buscando comprar, vender o alquilar una propiedad, o si estás interesado 
+        en asesoramiento experto en inversiones inmobiliarias. 
+        En <b>NIEDAN</b>, no solo vendemos propiedades, creamos hogares y construimos relaciones duraderas. </p>
+        
+        <p>Tu hogar, nuestra pasión.</p>
+    </div>
   </div>
+  
+
+  <script>
+    $(document).ready(function () {
+      $('.quienesomos').hover(
+        function () {
+          $(this).css('background-color', '#D5D6D2');
+        }
+      );
+    });
+  </script>
 
   <div class="misioncontenedor">
     <div class="textomision">
@@ -65,6 +79,7 @@
 
     <img class="vissionimage" width="350px" src="Imagenes/familiafelizcasanueva.jpg" alt="imagen">
 
+    
 </div>
 <hr class="linea-horizontal">
 

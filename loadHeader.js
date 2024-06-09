@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.querySelector("header").innerHTML = data;
+            // Agregar eventos hover después de cargar el header
+            $('nav ul li a').hover(
+                function () {
+                    $(this).css('text-decoration', 'underline');
+                }, function () {
+                    $(this).css('text-decoration', 'none');
+                }
+            );
         })
         .catch(error => console.error('Error cargando el header:', error));
 });
-

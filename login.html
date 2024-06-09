@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
 </head>
 <body>
@@ -23,31 +24,20 @@
         <p>¿Aún no tienes cuenta? <a href="registrate.html">¡Regístrate!</a></p>
     </div>
 
+    <script>
+        $(document).ready(function () {
+          $('.login-container').hover(
+            function () {
+              $(this).css('border-color', 'black');
+            }, function () {
+              $(this).css('border-color', '');
+            }
+          );
+        });
+      </script>
+
+
     <footer></footer>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir el envío del formulario
-
-            // Obtener los valores de los campos de entrada
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Obtener los valores guardados en localStorage
-            var storedUsername = localStorage.getItem('username');
-            var storedPassword = localStorage.getItem('password');
-
-            // Verificar los datos
-            if (username === storedUsername && password === storedPassword) {
-                alert('Inicio de sesión exitoso.');
-                // Redirigir a la página principal o a otra página protegida
-                window.location.href = 'index.html';
-                alert('Bienvenido '+username);
-            } else {
-                alert('Usuario o contraseña incorrectos.');
-               
-            }
-        });
-    </script>
 </body>
 </html>

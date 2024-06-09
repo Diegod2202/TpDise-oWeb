@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="loadHeader.js" defer></script>
   <script src="loadFooter.js" defer></script>
   <script src="bannerbuttons.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="bannerimage.js"></script>
- 
+  <script src="bannerimage.js" defer></script>
 </head>
 
 <body>
@@ -29,8 +28,8 @@
             <a href="#" class="button" id="compra" data-img="./Imagenes/portada.jpg">Compra</a>
             <a href="#" class="button" id="venta" data-img="./Imagenes/casahd.jpeg">Venta</a>
           </div>
-          <!-- En una proxima feature se supone que estos botones deben quedar presionados para que al buscar algo tome 
-                  esas opciones para tenerlas en cuenta en la busqueda -->
+          <!-- En una próxima feature se supone que estos botones deben quedar presionados para que al buscar algo tome 
+               esas opciones para tenerlas en cuenta en la búsqueda -->
           <div class="search-input">
             <div class="input-wrapper">
               <input type="text" name="search" placeholder="Ingrese zona...">
@@ -42,6 +41,10 @@
     </div>
   </div>
   </div>
+</body>
+
+</html>
+
   <div class="titulito">
     <h1>¡Encontrá las mejores propiedades en venta y alquiler!</h1>
   </div>
@@ -66,7 +69,17 @@
       <h2><a href="index.html">El crecimiento del mercado inmobiliario</a></h2>
       <p>En los ultimos meses ha habido un gran aumento inmobiliario, aprende sobre el.</p>
     </div>
-
+    <script>
+      $(document).ready(function () {
+        $('.card').hover(
+          function () {
+            $(this).css('background-color', '#d5d6d2');
+          }, function () {
+            $(this).css('background-color', '');
+          }
+        );
+      });
+    </script>
   </div>
   </div>
   </div>
