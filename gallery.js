@@ -39,6 +39,13 @@ $(document).ready(function() {
         showNext();
     });
 
+    // para que al hacer click fuera de la foto tambien se cierre
+    $('#lightbox').on('click', function(event) {
+        if ($(event.target).is('#lightbox')) {
+            closeLightbox();
+        }
+    });
+
     $(document).on('keydown', function(event) {
         if (event.key === 'Escape') {
             closeLightbox();
