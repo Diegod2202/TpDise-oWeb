@@ -8,6 +8,7 @@
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="gallery.js"></script>
     
 </head>
 <body>
@@ -15,7 +16,7 @@
 
         <h2>Encontra el hogar de tus sueños</h2>
         <div class="propiedad">
-          <img src="./Imagenes/propiedad1.webp" alt="Imagen de la propiedad">
+          <img src="./Imagenes/propiedad1.webp" alt="Amplio apartamento con vistas panorámicas al mar y diseño moderno" class="gallery-item">
           <div class="informacion">
               <p>Amplio apartamento con vistas panorámicas al mar y diseño moderno.</p>
               <p>Precio: $150.000</p>
@@ -27,7 +28,7 @@
         </div>
 
         <div class="propiedad">
-          <img src="./Imagenes/propiedad2.webp" alt="Imagen de la propiedad">
+          <img src="./Imagenes/propiedad2.webp" alt="Casa adosada en vecindario tranquilo, con jardín privado y acceso a comodidades de lujo" class="gallery-item">
           <div class="informacion">
               <p>Casa adosada en vecindario tranquilo, con jardín privado y acceso a comodidades de lujo.</p>
               <p>Precio: $300.000</p>
@@ -39,7 +40,7 @@
         </div>
 
         <div class="propiedad">
-          <img src="./Imagenes/propiedad3.jpg" alt="Imagen de la propiedad">
+          <img src="./Imagenes/propiedad3.jpg" alt="Acogedor loft en el corazón de la ciudad, ideal para profesionales creativos." class="gallery-item">
           <div class="informacion">
               <p>Acogedor loft en el corazón de la ciudad, ideal para profesionales creativos.</p>
               <p>Precio: $250.000</p>
@@ -51,7 +52,7 @@
         </div>
           
         <div class="propiedad">
-          <img src="./Imagenes/propiedad4.jpg" alt="Imagen de la propiedad">
+          <img src="./Imagenes/propiedad4.jpg" alt="Departamento renovado con acabados de alta calidad y ubicación céntrica." class="gallery-item">
           <div class="informacion">
               <p>Departamento renovado con acabados de alta calidad y ubicación céntrica.</p>
               <p>Precio: $120.000</p>
@@ -73,6 +74,13 @@
             );
           });
         </script>
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <img class="lightbox-content">
+          <div class="caption"></div>
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+        </div>
 
             
         <hr class="linea-horizontal">

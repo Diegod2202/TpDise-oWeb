@@ -8,6 +8,7 @@
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="gallery.js"></script>
     
 </head>
 <body>
@@ -15,8 +16,8 @@
 
     <h2>Encontra el hogar de tus sueños</h2>
     <div class="propiedad">
-        <img src="./Imagenes/propiedad5.jpg" alt="Imagen de la propiedad">
-        <div class="informacion">
+        <img src="./Imagenes/propiedad5.jpg" alt="Encantadora casa de campo con chimenea, rodeada de naturaleza exuberante" class = "gallery-item">
+          <div class="informacion">
             <p>Encantadora casa de campo con chimenea, rodeada de naturaleza exuberante.</p>
             <p>Precio: $170.000</p>
             <p>Expensas: $35.000</p>
@@ -27,7 +28,7 @@
       </div>
 
       <div class="propiedad">
-        <img src="./Imagenes/propiedad6.jpg" alt="Imagen de la propiedad">
+        <img src="./Imagenes/propiedad6.jpg" alt="Piso luminoso con balcón privado y acceso a piscina comunitaria." class = "gallery-item">
         <div class="informacion">
             <p>Piso luminoso con balcón privado y acceso a piscina comunitaria.</p>
             <p>Precio: $150.000</p>
@@ -39,7 +40,7 @@
       </div>
 
       <div class="propiedad">
-        <img src="./Imagenes/propiedad7.jpg" alt="Imagen de la propiedad">
+        <img src="./Imagenes/propiedad7.jpg" alt="Moderno apartamento de un dormitorio con cocina gourmet y terraza con vistas a la ciudad." class="gallery-item">
         <div class="informacion">
             <p>Moderno apartamento de un dormitorio con cocina gourmet y terraza con vistas a la ciudad.</p>
             <p>Precio: $290.000</p>
@@ -51,7 +52,7 @@
       </div>
         
       <div class="propiedad">
-        <img src="./Imagenes/propiedad8.jpg" alt="Imagen de la propiedad">
+        <img src="./Imagenes/propiedad8.jpg" alt="Casa familiar con patio trasero espacioso, ideal para reuniones y entretenimiento al aire libre" class="gallery-item">
         <div class="informacion">
             <p>Casa familiar con patio trasero espacioso, ideal para reuniones y entretenimiento al aire libre.</p>
             <p>Precio: $180.000</p>
@@ -73,7 +74,13 @@
           );
         });
       </script>
-
+      <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content">
+        <div class="caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
       <hr class="linea-horizontal">
       <footer></footer>
 </body>
