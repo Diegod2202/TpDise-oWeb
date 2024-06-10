@@ -8,7 +8,6 @@
     <script src="loadHeader.js" defer></script>
     <script src="loadFooter.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
 </head>
 <body>
     <header></header>
@@ -26,18 +25,27 @@
 
     <script>
         $(document).ready(function () {
-          $('.login-container').hover(
-            function () {
-              $(this).css('border-color', 'black');
-            }, function () {
-              $(this).css('border-color', '');
-            }
-          );
-        });
-      </script>
+            // Cambiar el color del borde cuando el mouse está sobre la caja de login
+            $('.login-container').hover(
+                function () {
+                    $(this).css('border-color', 'black');
+                }, function () {
+                    $(this).css('border-color', '');
+                }
+            );
 
+            // Cambiar el color del borde cuando un campo de entrada recibe el foco
+            $('#username, #password').focus(function () {
+                $(this).css('border-color', 'blue');
+            });
+
+            // Cambiar el color del borde cuando un campo de entrada pierde el foco
+            $('#username, #password').blur(function () {
+                $(this).css('border-color', '');
+            });
+        });
+    </script>
 
     <footer></footer>
-
 </body>
 </html>

@@ -168,6 +168,7 @@ nav ul li a {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #d5d6d2;
+    min-height: 100%;
 }
 
 .login-container h2 {
@@ -431,7 +432,9 @@ footer {
     background-color: #2f2e33;
     color: #fff;
     padding: 10px 0;
-    height: 250px;
+    min-height: 100px; 
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .footer-container {
