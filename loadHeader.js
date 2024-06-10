@@ -1,4 +1,4 @@
-// loadHeader.js
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch('header.html')
         .then(response => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.querySelector("header").innerHTML = data;
-            // Agregar eventos hover después de cargar el header
+        
             $('nav ul li a').hover(
                 function () {
                     $(this).css('text-decoration', 'underline');

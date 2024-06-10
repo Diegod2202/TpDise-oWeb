@@ -25,7 +25,7 @@
 
     <script>
         $(document).ready(function () {
-            // Cambiar el color del borde cuando el mouse está sobre la caja de login
+        
             $('.login-container').hover(
                 function () {
                     $(this).css('border-color', 'black');
@@ -33,13 +33,9 @@
                     $(this).css('border-color', '');
                 }
             );
-
-            // Cambiar el color del borde cuando un campo de entrada recibe el foco
             $('#username, #password').focus(function () {
-                $(this).css('border-color', 'blue');
+                $(this).css('border-color', '3a5199');
             });
-
-            // Cambiar el color del borde cuando un campo de entrada pierde el foco
             $('#username, #password').blur(function () {
                 $(this).css('border-color', '');
             });

@@ -39,7 +39,7 @@ $(document).ready(function() {
         showNext();
     });
 
-    // para que al hacer click fuera de la foto tambien se cierre
+   
     $('#lightbox').on('click', function(event) {
         if ($(event.target).is('#lightbox')) {
             closeLightbox();
@@ -56,3 +56,49 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function() {
+    
+    $('.boton-contacto').on('click', function(event) {
+        event.preventDefault();
+        $('#contact-modal').css('display', 'block');
+    });
+
+    $('.close-modal').on('click', function() {
+        $('#contact-modal').css('display', 'none');
+    });
+
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#contact-modal')) {
+            $('#contact-modal').css('display', 'none');
+        }
+    });
+});
+
+$(document).ready(function() {
+    
+    $('.boton-contacto').on('click', function(event) {
+        event.preventDefault();
+        $('#contact-modal').css('display', 'block');
+        setTimeout(function() {
+            $('#contact-modal .modal-content').addClass('show');
+        }, 10); 
+    });
+
+    $('.close-modal').on('click', function() {
+        $('#contact-modal .modal-content').removeClass('show');
+        setTimeout(function() {
+            $('#contact-modal').css('display', 'none');
+        }, 300); 
+    });
+
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#contact-modal')) {
+            $('#contact-modal .modal-content').removeClass('show');
+            setTimeout(function() {
+                $('#contact-modal').css('display', 'none');
+            }, 300); 
+        }
+    });
+});
+

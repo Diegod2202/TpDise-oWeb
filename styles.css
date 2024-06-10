@@ -12,7 +12,6 @@ header {
     align-items: center;
     color: rgb(0, 0, 0);
     height: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .logo img {
@@ -66,10 +65,9 @@ nav ul li a {
 .image {
     position: relative;
     width: 100%;
-    height: 500px; /* Ajusta la altura según tus necesidades */
-    overflow: hidden; /* Para ocultar cualquier contenido que se desborde */
+    height: 500px;
+    overflow: hidden;
 }
-
 
 .image img {
     position: absolute;
@@ -77,8 +75,9 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: auto;
-    transition: opacity 0.5s ease; /* Agrega una transición de opacidad para un efecto de desvanecimiento */
+    transition: opacity 0.5s ease;
 }
+
 .search-box {
     position: absolute;
     top: 50%;
@@ -86,10 +85,6 @@ nav ul li a {
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: rgba(200, 200, 200, 0.5);
-}
-
-.search-options {
-    margin-bottom: 10px;
 }
 
 .search-options .button {
@@ -106,11 +101,6 @@ nav ul li a {
 
 .search-options .button:hover {
     background-color: #ccc;
-}
-
-.search-input {
-    position: initial;
-    width: 600px;
 }
 
 .input-wrapper {
@@ -160,48 +150,7 @@ nav ul li a {
     font-family: Arial, sans-serif;
 }
 
-
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #d5d6d2;
-    min-height: 100%;
-}
-
-.login-container h2 {
-    text-align: center;
-}
-
-.login-container form {
-    margin-top: 20px;
-}
-
-.login-container label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-.login-container input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3a5199;
-    color: #fff;
-    cursor: pointer;
-}
-
+.login-container,
 .register-container {
     width: 300px;
     margin: 100px auto;
@@ -211,19 +160,24 @@ nav ul li a {
     background-color: #d5d6d2;
 }
 
+.login-container h2,
 .register-container h2 {
     text-align: center;
 }
 
+.login-container form,
 .register-container form {
     margin-top: 20px;
 }
 
+.login-container label,
 .register-container label {
     display: block;
     margin-bottom: 5px;
 }
 
+.login-container input[type="text"],
+.login-container input[type="password"],
 .register-container input[type="text"],
 .register-container input[type="password"],
 .register-container input[type="email"] {
@@ -233,6 +187,7 @@ nav ul li a {
     box-sizing: border-box;
 }
 
+.login-container input[type="submit"],
 .register-container input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -304,7 +259,6 @@ nav ul li a {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .propiedad img {
@@ -333,18 +287,12 @@ nav ul li a {
     margin: 50px 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
 .quienesomos {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fffefb;
     border-radius: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -364,7 +312,6 @@ h1 {
     justify-content: right;
     width: 35%;
     margin-left: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .textomision h2 {
@@ -391,7 +338,6 @@ h1 {
     margin-left: auto;
     margin-right: 50px;
     justify-content: right;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .textovision h2 {
@@ -405,6 +351,7 @@ h1 {
     width: 720px;
     height: 450px;
 }
+
 .welcome {
     display: none;
     align-items: center;
@@ -426,7 +373,6 @@ h1 {
     border-style: solid;
     cursor: pointer;
 }
-
 
 footer {
     background-color: #2f2e33;
@@ -483,13 +429,13 @@ footer {
 }
 
 .footer-section .social-links li a img {
-    width: 32px; /* Ajusta el tamaño del icono */
+    width: 32px;
     height: 32px;
     transition: transform 0.3s;
 }
 
 .footer-section .social-links li a img:hover {
-    transform: scale(1.1); /* Efecto hover */
+    transform: scale(1.1);
 }
 
 .footer-section form {
@@ -528,7 +474,7 @@ footer {
     margin: 5px 0;
 }
 
-.linea-horizontal{
+.linea-horizontal {
     border: none;
 }
 
@@ -605,3 +551,55 @@ footer {
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) translateY(-50px);
+}
+
+.modal-content.show {
+    transform: translateY(-50%) translateY(0);
+    opacity: 1;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+
