@@ -6,16 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/Imagenes/logo.png" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="loadHeader.js" defer></script>
-  <script src="loadFooter.js" defer></script>
+  
   <script src="bannerbuttons.js" defer></script>
   <script src="bannerimage.js" defer></script>
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="./Imagenes/logo.png" alt="Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+            <li><a href="comprar.html">Comprar</a></li>
+            <li><a href="alquileres.html">Alquilar</a></li>
+        </ul>
+    </nav>
+    <div class="login">
+        <a href="login.html" class="highlight">Iniciar Sesión</a>
+    </div>
+</header>
+
+<script>
+    $(document).ready(function() {
+        $('header a').hover(
+            function() {
+                $(this).css('text-decoration', 'underline');
+            },
+            function() {
+                $(this).css('text-decoration', 'none');
+            }
+        );
+    });
+</script>
+
+
   <div class="container">
     <div class="image">
       <img src="./Imagenes/portada.jpg" alt="Imagen">
@@ -82,7 +112,51 @@
   </div>
   </div>
   <hr class="linea-horizontal">
-  <footer></footer>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>Dirección: 123 Calle Falsa, UADE</p>
+            <p>Teléfono: +54 9 11 1188 7766</p>
+            <p>Email: info@inmobiliaria-niedan.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos.html">Quiénes Somos</a></li>
+                <li><a href="comprar.html">Comprar</a></li>
+                <li><a href="alquileres.html">Alquilar</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Redes Sociales</h4>
+            <ul class="social-links">
+                <li><a href="#"><img src="./Imagenes/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./Imagenes/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="./Imagenes/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Suscríbete</h4>
+            <form action="index.html" method="POST">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <div class="footer-section">
+            <h4>Horario de Atención</h4>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p>Sábado: 10:00 AM - 2:00 PM</p>
+            <p>Domingo: Cerrado</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Inmobiliaria Niedan. Todos los derechos reservados.</p>
+        <p><a href="index.html">Política de Privacidad</a> | <a href="index.html">Términos de Uso</a></p>
+    </div>
+</footer>
+
 </body>
 
 </html>
